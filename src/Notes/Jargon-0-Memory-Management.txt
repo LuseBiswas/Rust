@@ -1,0 +1,15 @@
+Memory Mangemt:-
+1.)Garabge Collector Way:- Written by smart people, Ususally no dnagling pointer issues, you cant do mannual memory managemnt. 
+2.)Mannual Way:- You allocate and deallocate memory yourself, can lead to dangling pointer issues, (Its hard to do in c and this is why trading firma likes it). Learning Curve is High as you have to mannualy Memory Managemnt 
+3.)The Rust Way:- The Rust has its own owenership model for memory management, make it very safe to memory errors
+
+Whenevr you run a program the CPP , Rust or JS it allocates and de-allocates memory on RAM 
+
+Not haing the Grbale Collectore its the main reason why RUST is fast but due to its set of rules in Memory Managemnt it does not have that high risk with Memory Issues like we had in c
+
+
+
+
+
+
+

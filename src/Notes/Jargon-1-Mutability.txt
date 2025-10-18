@@ -1,0 +1,16 @@
+Jargon #1- Mutability
+
+Immutable Varailbles which values is once defined, never chnaged again in later on, we have to chnage from the siurce of truth
+
+And By Deafult all vairables in RUST is Immutable
+
+Example:- 
+fn  main(){
+    let x: i32 = 1;
+    x =  2; //It will Show the Error
+    println!('{}',x)
+
+    let mut y: Sring =  String::from("hi, there");
+    y.push_str(string:"String Pushing");
+    println!("{}",y);
+}
