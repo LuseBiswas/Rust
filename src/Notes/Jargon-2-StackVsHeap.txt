@@ -1,0 +1,17 @@
+How the Rust do memmory management under the hood?
+
+Rust has clear rule about Stack vs Heap Data management
+
+Stack: Fast allocation and dellocation. Rust use Stack for more primitive data types and for data where size is know in compile time.
+
+Heap: Used for data that can grow ate runtime, such as vector and string.
+
+--------------------------------------------------
+What's stored on the Stack?
+Number: i32, i64, f64
+Boolean: true, false
+Fixed Size Arrays
+
+What's stored in the Heap?
+Strings
+Vesctors
