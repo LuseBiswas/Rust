@@ -1,0 +1,26 @@
+You can also implements structs, which means you can attcah funtions to instance of structs
+
+Example
+
+struct React {
+    width: u32,
+    height: u64
+}
+
+impl React {
+    fn area(&self)->u32{
+        return self.width * self.height;
+    }
+}
+
+fn main(){
+    let rect : Rect = Rect{
+        width: 50,
+        height: 60
+    }
+    println!("The area of the rectangle is {}",rect.area())
+}
+
+**Unit Struct**
+Struct with no attributes
+struct NoShape

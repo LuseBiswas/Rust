@@ -1,0 +1,45 @@
+Rust provides you something called RESULT ENUM
+
+enum Result<T, E>{
+    Ok(T),
+    Err(E),
+}
+
+If you look the above code , it is an ENUM (with genric type)
+-------------------------------------------------------------------
+Generic Type is nothing but telling Rust that its generic like
+struct Point<A,B,C>{ //So genrice can be any lattre just it should be Uppercase
+    x:A,
+    y:B,
+    z:B
+}
+
+//So now in main funtion
+fn main(){
+    let integer_point : Point<i32,&str>  = Point{ x:12, y:"12", z:"12"} 
+}
+-------------------------------------------------------------------
+
+fn divide(a: i32, b: i32) -> Result<i32, String> {
+    if b == 0 {
+        Err("Cannot divide by zero!".to_string())
+    } else {
+        Ok(a / b)
+    }
+}
+
+fn main() {
+    // Case 1: Success
+    let result1 = divide(10, 2);
+    match result1 {
+        Ok(value) => println!("Success: 10 / 2 = {}", value),
+        Err(error) => println!("Error: {}", error),
+    }
+
+    // Case 2: Failure
+    let result2 = divide(10, 0);
+    match result2 {
+        Ok(value) => println!("Success: {}", value),
+        Err(error) => println!("Error: {}", error),
+    }
+}

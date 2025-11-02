@@ -1,0 +1,36 @@
+Enums in Rust is similar to Enums in Typescript. They allow you to define a type by enummerating its possible variants
+
+Example
+
+enum Direction{
+    North,
+    East,
+    South,
+    West
+}
+
+fn main(){
+    let my_direction = Direction::North;
+    move_around(my_direction)
+}
+
+fn move_around(direction: Direction){
+
+}
+
+**Enum With value**
+enum Direction{
+    North(f64),
+    East(f64),
+    South(f64),
+    West(f64)
+}
+
+fn main(){
+    let my_direction = Direction::North(5.0);
+    move_around(my_direction)
+}
+
+fn move_around(direction: Direction){
+
+}

@@ -1,0 +1,63 @@
+**Borrowing**
+ 
+So there will be 3 cases of Owenership and Borrowers
+
+1.) Rihana will only have 1 Owner
+
+2.) Rihana will have 1 Owner and Multiple Borrowers (but no Hanky Panky)
+
+3.)Rihana will have 1 Owner and 1 Borrower(With Hanky Panky) but after that not other Borrower can be there even with No Hanky Panky
+ 
+**Refrences**
+
+Refrences mean giving the address of a string rather than the ownership of the string over to a funtion
+
+Example:
+
+fn main(){
+
+    let s1: String::from("Hello");
+
+    lest s2 = &s1;
+ 
+    println!("{}",s2);
+
+    println!("{}",s1);
+
+}
+ 
+Borrowing
+
+You can transferring ownership of variable to functions. By passing a refrence to the string to the funtion take_ownership, 
+
+the ownership of the string remains with the oriignal varaible, in the main funtion. This allows you to use my_string again after the funtion call.
+
+Example:
+
+fn main(){
+
+    let my_string = String::from("Hello, Rust");
+
+    take_owernship(&my_string);
+
+    println!("{}", my_string);
+
+}
+
+fn take_owernship(some_string: &String){
+
+}
+
+ ----------------------------------------------------
+
+Example of hanky Panke
+fn main(){
+let s1 = String::from("Hello");
+update_str(&mut s1)
+println!("{}",s1);
+
+}
+
+fn update_str(Word :&mut String){
+Word.push_str(string: "World")
+}

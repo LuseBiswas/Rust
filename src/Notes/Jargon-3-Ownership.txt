@@ -1,0 +1,28 @@
+Owenership in Rust which makes it etremely memory safe, which tells when to drop variables and when to dellocate the memory.
+
+Each peice of data in Rust has a single owner at any given time. When the owner goes out of scope, Rust automatically deallocates the memory associated with that data, preventing memory leaks.
+
+Ownership:-
+ 
+Owenership : Biggest Moat of Rust was it Memory Safe
+ 
+What is Owenership?
+
+Owenership is a set of rules that givern how a Rust program manages memory.
+ 
+There are 3-types of Memory Management
+
+1.) Some languages have Garbage collection that regularly checks for no-longer used memory as the program runs
+
+2.) Other languages, the programmer must explicitly allocate and de-allocate and free the memory
+
+3.) RUST uses the Third Approach: Memory is managed through system of ownership with set of rules that the compiler chekcs.
+
+If any of the rules are violated, the program won't complile. None of the the features of ownership will slow down your programm while its running.
+ 
+Learn about :- Dangling Errors and Dangling Free Errors
+ 
+Rust Way:-
+
+- Anytime put something on the heap then there must be some variable on the stack that will own it (ownership).
+ 

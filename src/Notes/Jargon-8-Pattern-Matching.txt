@@ -1,0 +1,26 @@
+Let you pattern match across various variants of an enum and run some logic
+
+Example
+
+enum Shape{
+    Circle(f64),
+    Rectanle(f64, f64),
+    Square(f64)
+}
+
+fn calculate_area(shape:Shape){
+    let ans: f64 = match shape{
+        Shape::Circle(radius: f64)=> 3.14 * radius,
+        Shape::Rectanle(width: f64, height: f64){
+            width * height
+        }
+        Shape::Square(side)=> side * side;
+    }
+    return ans;
+}
+
+fn main(){
+    let circle: Shape = Shape::Circle(5.0);
+    let rectangle: Shape = Shape::Rectanle(5.0);
+    let square: Shape = Shape::Square(5.0,6.0);
+}
